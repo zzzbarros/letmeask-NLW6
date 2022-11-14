@@ -16,9 +16,11 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [React](https://reactjs.org)
+- [React](https://reactjs.org) (v18.2.0)
 - [Firebase](https://firebase.google.com/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [TypeScript](https://www.typescriptlang.org/) (v4.8.4)
+- [NodeJS](https://nodejs.org/en/) (v19.0.1)
+- [NPM](https://www.npmjs.com/) (v9.1.1)
 
 ## 🚀 Como executar
 
