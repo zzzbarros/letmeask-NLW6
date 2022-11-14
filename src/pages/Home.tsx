@@ -1,4 +1,4 @@
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router';
 import { useAuth } from '../hooks/useAuth';
 import { FormEvent, useState } from 'react';
 
@@ -10,12 +10,12 @@ import { Button } from '../components/Button/';
 
 
 import '../styles/auth.scss';
-import { database } from '../services/firebase';
+import {database} from '../services/firebase';
 
 
 
 export function Home() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const { user, signInWithGoogle } = useAuth()
   const [roomCode, setRoomCode] = useState('')
 
@@ -24,7 +24,7 @@ export function Home() {
       await signInWithGoogle();
     }
 
-    history.push('/rooms/new');
+    navigate('/rooms/new');
   }
 
   async function handleJoinRoom(e: FormEvent) {
@@ -46,7 +46,7 @@ export function Home() {
       return
     }
 
-    history.push(`/rooms/${roomCode}`)
+    navigate(`/rooms/${roomCode}`)
   }
 
 

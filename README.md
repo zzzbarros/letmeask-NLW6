@@ -17,10 +17,15 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [React](https://reactjs.org) (v18.2.0)
-- [Firebase](https://firebase.google.com/)
+- [Firebase](https://firebase.google.com/) (v8.6.8)
 - [TypeScript](https://www.typescriptlang.org/) (v4.8.4)
-- [NodeJS](https://nodejs.org/en/) (v19.0.1)
-- [NPM](https://www.npmjs.com/) (v9.1.1)
+- [Cypress](https://www.cypress.io/)(v11.0.1)
+
+## Dependências
+
+Para instalação das dependências e gerenciamento, foi utilizado:
+- [NodeJS](https://nodejs.org/en/) (v18.12.1)
+- [NPM](https://www.npmjs.com/) (v8.12.2)
 
 ## 🚀 Como executar
 
