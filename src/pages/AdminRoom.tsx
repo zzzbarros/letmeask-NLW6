@@ -1,4 +1,5 @@
-import { Link, useHistory, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import {useNavigate} from 'react-router'
 
 import { Button } from "../components/Button/";
 import { RoomCode } from "../components/RoomCode/";
@@ -23,18 +24,18 @@ type RoomParams = {
 
 export function AdminRoom() {
   // const { user } = useAuth()
-  const history = useHistory()
+  const navigate = useNavigate()
   const params = useParams<RoomParams>()
   const roomId = params.id
 
-  const { title, questions } = useRoom(roomId)
+  const { title, questions } = useRoom(roomId || "")
 
   async function handleEndRoom() {
     await database.ref(`rooms/${roomId}`).update({
       endedAt: new Date()
     })
 
-    history.push(`/`)
+    navigate(`/`)
   }
 
   async function handleDeleteQuestion(questionId: string) {
@@ -63,7 +64,7 @@ export function AdminRoom() {
             <img src={logoImg} alt="Leatmeask" />
           </Link>
           <div>
-            <RoomCode code={roomId} />
+            <RoomCode code={roomId || ""} />
             <Button isOutlined onClick={handleEndRoom}>Encerrar sala</Button>
           </div>
         </div>
